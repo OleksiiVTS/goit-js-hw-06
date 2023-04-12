@@ -22,3 +22,4 @@ images.forEach(({url, alt}) => {
 });
 // console.log(galleryFragment)
 gallery.insertAdjacentHTML("beforeend", galleryFragment)
+
