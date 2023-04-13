@@ -14,10 +14,17 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
+gallery.style.display = "flex";
+gallery.style.flexWrap = "wrap";
+gallery.style.alignItems = "center";
+gallery.style.justifyContent = "space-evenly";
+gallery.style.gap = "10px";
+gallery.style.listStyle = "none";
+              
 let galleryFragment = "";
 
 images.forEach(({url, alt}) => {
-  const image = `<li><img class="image" width="300px" height="auto"; src="${url}" alt="${alt}"></li>`;
+  const image = `<li><img style="border-radius: 10px; box-shadow: 10px 5px 5px gray" width="300px" height="auto"; src="${url}" alt="${alt}"></li>`;
   galleryFragment += image;
 });
 // console.log(galleryFragment)
