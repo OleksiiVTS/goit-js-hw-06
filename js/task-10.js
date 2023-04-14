@@ -17,10 +17,12 @@ divControls.firstElementChild.addEventListener("input", findeValue);
 function findeValue(event) {
     console.log(event.currentTarget.value)
     return createBoxes(event.currentTarget.value)
+    // return event.currentTarget.value
   }
 
 function createBoxes(amount) {
   console.log(amount)
+  console.log("create")
   const fragment = document.createDocumentFragment();
   for (let i = 0; i < amount; i++) {
     let sise = 10 * i;
@@ -38,8 +40,6 @@ function destroyBoxes() {
   resultBoxes.innerHTML = "";
 }
 
-// console.log(buttonCreate)
-// console.log(buttonDestroy)
 
 
 
