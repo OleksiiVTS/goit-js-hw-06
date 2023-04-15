@@ -12,15 +12,15 @@ const buttonDestroy = divControls.querySelector('[data-destroy]');
 buttonCreate.addEventListener("click", createBoxes);
 buttonDestroy.addEventListener("click", destroyBoxes);
 
-divControls.firstElementChild.addEventListener("input", findeValue);
+// divControls.firstElementChild.addEventListener("input", findeValue);
 
-function findeValue(event) {
-    console.log(event.currentTarget.value)
-    return createBoxes(event.currentTarget.value)
-    // return event.currentTarget.value
-  }
+// function findeValue(event) {
+//     console.log(event.currentTarget.value)
+//     return createBoxes(event.currentTarget.value)ue
+//   }
 
 function createBoxes(amount) {
+  amount = divControls.firstElementChild.value;
   console.log(amount)
   console.log("create")
   const fragment = document.createDocumentFragment();
@@ -32,7 +32,6 @@ function createBoxes(amount) {
     divEl.style.height = `${30+sise}px`;
     resultBoxes.appendChild(divEl)
   }
-  
 }
 
 function destroyBoxes() {

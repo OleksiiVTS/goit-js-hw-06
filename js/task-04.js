@@ -5,7 +5,7 @@ const buttonIncrement = document.querySelector(`[data-action="increment"]`)
 let counterValue = 0;
 
 const remoutItem = () => {
-    counterValue !== 0 ?  counterValue -= 1 : counterValue === 0
+     counterValue -= 1
     return valueEl.textContent = counterValue
 };
 const addItem  = () => {
